@@ -1,0 +1,260 @@
+<HTML>
+<HEAD>
+    <TITLE>LIO - Plataforma Literaria Profesional</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FAF9F6" TEXT="#2C3333">
+
+<BR>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Audiolibros</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* ENCABEZADO */
+header{
+    height:250px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:mover 8s infinite alternate;
+}
+
+header::before{
+    top:-100px;
+    left:-100px;
+}
+
+header::after{
+    bottom:-100px;
+    right:-100px;
+}
+
+.logo{
+    color:white;
+    font-size:90px;
+    font-weight:bold;
+    letter-spacing:10px;
+    text-shadow:0 0 15px white,
+                0 0 30px #93c5fd;
+    animation:brillo 2s infinite alternate;
+}
+
+.slogan{
+    color:white;
+    font-size:22px;
+    margin-top:10px;
+    letter-spacing:2px;
+}
+
+/* MEN  */
+nav{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* CONTENIDO */
+main{
+    padding:40px;
+    text-align:center;
+}
+
+main h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+main p{
+    color:#444;
+    font-size:18px;
+}
+
+/* ANIMACIONES */
+@keyframes brillo{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.08);
+    }
+}
+
+@keyframes mover{
+    from{
+        transform:translateY(-20px);
+    }
+    to{
+        transform:translateY(20px);
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">LIO</div>
+    <div class="slogan">Tu mundo de audiolibros y lectura</div>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="AUDIOLIBROS.html">Audiolibros</a>
+    <a href="Peruana.html">Peruana</a>
+    <a href="Juvenil.html">Juvenil</a>
+    <a href="Universal.html">Universal</a>
+</nav>
+
+<BR><BR>
+
+<CENTER>
+    <TABLE BORDER="0" CELLPADDING="40" WIDTH="90%" BGCOLOR="WHITE" 
+    STYLE="border-radius: 30px; border-left: 15px solid #FF69B4; 
+    box-shadow: 0px 10px 30px #EEE;">
+        <TR>
+            <TD>
+                <FONT FACE="Playfair Display" COLOR="#1B263B" SIZE="7">
+                    Literatura Juvenil
+                </FONT>
+                <BR><BR>
+                <FONT FACE="Arial" COLOR="#555555" SIZE="4">
+                    Explora historias llenas de aventura, romance y mundos fantásticos. 
+                    La literatura juvenil nos permite vivir miles de realidades, desde 
+                    distopías desafiantes hasta las magias más asombrosas que puedas imaginar.
+                </FONT>
+                <BR><BR>
+                <BUTTON STYLE="background-color:#FF69B4; color:white; border-radius:25px; padding:12px 30px; cursor:pointer; border:none;">
+                    Explorar Mundos ✨
+                </BUTTON>
+            </TD>
+            <TD ALIGN="RIGHT">
+                <FONT SIZE="10">✨</FONT>
+            </TD>
+        </TR>
+    </TABLE>
+
+    <BR><BR><BR>
+
+    <TABLE BORDER="0" WIDTH="85%">
+        <TR>
+            <TD>
+                <FONT FACE="Montserrat" COLOR="#1B263B" SIZE="6">
+                    <B>Sagas y Libros Tendencia</B>
+                </FONT>
+                <HR COLOR="#FF69B4" WIDTH="180" ALIGN="LEFT">
+            </TD>
+        </TR>
+    </TABLE>
+
+    <BR>
+
+    <TABLE BORDER="0" CELLPADDING="20" CELLSPACING="15">
+        <TR>
+            <TD BGCOLOR="WHITE" ALIGN="CENTER" STYLE="border-radius: 20px; box-shadow: 0px 10px 20px #DDD;">
+                <IMG SRC="harrypotter.jpg" WIDTH="140" HEIGHT="200" STYLE="border-radius: 5px; border:1px solid #EEE;">
+                <BR><BR>
+                <FONT FACE="Arial" SIZE="4"><B>Harry Potter</B></FONT><BR>
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">J.K. Rowling</FONT><BR><BR>
+                <BUTTON STYLE="background-color:#F5F5F5; border:1px solid #CCC; border-radius:8px; padding:5px 10px;">Leer Online</BUTTON>
+            </TD>
+
+            <TD BGCOLOR="WHITE" ALIGN="CENTER" STYLE="border-radius: 20px; box-shadow: 0px 10px 20px #DDD;">
+                <IMG SRC="hungergames.jpg" WIDTH="140" HEIGHT="200" STYLE="border-radius: 5px; border:1px solid #EEE;">
+                <BR><BR>
+                <FONT FACE="Arial" SIZE="4"><B>Los Juegos del Hambre</B></FONT><BR>
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">Suzanne Collins</FONT><BR><BR>
+                <BUTTON STYLE="background-color:#F5F5F5; border:1px solid #CCC; border-radius:8px; padding:5px 10px;">Leer Online</BUTTON>
+            </TD>
+
+            <TD BGCOLOR="WHITE" ALIGN="CENTER" STYLE="border-radius: 20px; box-shadow: 0px 10px 20px #DDD;">
+                <IMG SRC="percyjackson.gif" WIDTH="140" HEIGHT="200" STYLE="border-radius: 5px; border:1px solid #EEE;">
+                <BR><BR>
+                <FONT FACE="Arial" SIZE="4"><B>Percy Jackson</B></FONT><BR>
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">Rick Riordan</FONT><BR><BR>
+                <BUTTON STYLE="background-color:#F5F5F5; border:1px solid #CCC; border-radius:8px; padding:5px 10px;">Leer Online</BUTTON>
+            </TD>
+
+            <TD BGCOLOR="WHITE" ALIGN="CENTER" STYLE="border-radius: 20px; box-shadow: 0px 10px 20px #DDD;">
+                <IMG SRC="divergente.jpg" WIDTH="140" HEIGHT="200" STYLE="border-radius: 5px; border:1px solid #EEE;">
+                <BR><BR>
+                <FONT FACE="Arial" SIZE="4"><B>Divergente</B></FONT><BR>
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">Veronica Roth</FONT><BR><BR>
+                <BUTTON STYLE="background-color:#F5F5F5; border:1px solid #CCC; border-radius:8px; padding:5px 10px;">Leer Online</BUTTON>
+            </TD>
+        </TR>
+    </TABLE>
+
+    <BR><BR><BR>
+
+    <TABLE BORDER="0" CELLPADDING="30" WIDTH="70%" BGCOLOR="#FDF2F8" STYLE="border-radius:20px; border:2px dashed #FF69B4;">
+        <TR>
+            <TD ALIGN="CENTER">
+                <FONT FACE="Playfair Display" COLOR="#1B263B" SIZE="6">
+                    <I>"Un libro es un sueño que tienes en tus manos."</I>
+                </FONT>
+                <BR>
+                <FONT FACE="Arial" COLOR="#555555" SIZE="3">— Neil Gaiman</FONT>
+            </TD>
+        </TR>
+    </TABLE>
+
+    <BR><BR><BR></CENTER>
+
+
+    <!-- ===== FOOTER ===== -->
+    <TABLE BORDER="0" BGCOLOR="#1B263B" WIDTH="100%" CELLPADDING="40">
+        <TR>
+            <TD ALIGN="CENTER">
+                <FONT FACE="Arial" COLOR="#D4A373" SIZE="4"><B>L I O</B></FONT><BR><BR>
+                <FONT FACE="Arial" COLOR="WHITE" SIZE="2">
+                    Proyecto creado para fomentar la lectura digital en Instituciones Educativas.<BR>
+                    Trujillo, Perú - 2026<BR>
+                    <BR>
+                    <A HREF="#" STYLE="color:white; text-decoration:none;">Instagram</A> | 
+                    <A HREF="#" STYLE="color:white; text-decoration:none;">Facebook</A> | 
+                    <A HREF="#" STYLE="color:white; text-decoration:none;">Contacto</A>
+                </FONT>
+            </TD>
+        </TR>
+    </TABLE>
+
+</CENTER>
+
+</BODY>
+</HTML>

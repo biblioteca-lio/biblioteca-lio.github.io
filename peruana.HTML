@@ -1,0 +1,444 @@
+<HTML>
+<HEAD>
+    <TITLE>LIO - Plataforma Literaria Profesional</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FAF9F6" TEXT="#2C3333">
+
+<BR>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Audiolibros</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* ENCABEZADO */
+header{
+    height:250px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:mover 8s infinite alternate;
+}
+
+header::before{
+    top:-100px;
+    left:-100px;
+}
+
+header::after{
+    bottom:-100px;
+    right:-100px;
+}
+
+.logo{
+    color:white;
+    font-size:90px;
+    font-weight:bold;
+    letter-spacing:10px;
+    text-shadow:0 0 15px white,
+                0 0 30px #93c5fd;
+    animation:brillo 2s infinite alternate;
+}
+
+.slogan{
+    color:white;
+    font-size:22px;
+    margin-top:10px;
+    letter-spacing:2px;
+}
+
+/* MEN  */
+nav{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* CONTENIDO */
+main{
+    padding:40px;
+    text-align:center;
+}
+
+main h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+main p{
+    color:#444;
+    font-size:18px;
+}
+
+/* ANIMACIONES */
+@keyframes brillo{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.08);
+    }
+}
+
+@keyframes mover{
+    from{
+        transform:translateY(-20px);
+    }
+    to{
+        transform:translateY(20px);
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">LIO</div>
+    <div class="slogan">Tu mundo de audiolibros y lectura</div>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="AUDIOLIBROS.html">Audiolibros</a>
+    <a href="Peruana.html">Peruana</a>
+    <a href="Juvenil.html">Juvenil</a>
+    <a href="Universal.html">Universal</a>
+</nav>
+
+   <BR><BR>
+<CENTER>
+    <!-- PRESENTACION -->
+    <A NAME="INICIO"></A>
+
+    <TABLE BORDER="0" CELLPADDING="40" WIDTH="90%" BGCOLOR="WHITE"
+    STYLE="border-radius: 30px; border-left: 15px solid #C97C5D;
+    box-shadow: 0px 10px 30px #EEE;">
+
+        <TR>
+
+            <TD>
+
+                <FONT FACE="Playfair Display" COLOR="#7B2C2C" SIZE="7">
+                    Literatura Peruana
+                </FONT>
+
+                <BR><BR>
+
+                <FONT FACE="Arial" COLOR="#555555" SIZE="4">
+
+                    La literatura peruana representa la identidad, historia y cultura
+                    del Perú a través de grandes escritores y obras reconocidas.
+                    Desde las tradiciones y novelas indígenas hasta la poesía moderna,
+                    las obras peruanas muestran la diversidad cultural y social del país.
+
+                </FONT>
+
+                <BR><BR>
+
+                <BUTTON STYLE="background-color:#7B2C2C;
+                color:white;
+                border-radius:25px;
+                padding:12px 30px;
+                cursor:pointer;">
+
+                    Explorar Obras 📚
+
+                </BUTTON>
+
+            </TD>
+
+            <TD ALIGN="RIGHT">
+                <FONT SIZE="10">🇵🇪</FONT>
+            </TD>
+
+        </TR>
+
+    </TABLE>
+
+    <BR><BR><BR>
+
+    <!-- TITULO -->
+    <A NAME="PERUANA"></A>
+
+    <TABLE BORDER="0" WIDTH="85%">
+        <TR>
+            <TD>
+                <FONT FACE="Montserrat" COLOR="#7B2C2C" SIZE="6">
+                    <B> Obras Destacadas del Perú</B>
+                </FONT>
+
+                <HR COLOR="#C97C5D" WIDTH="180" ALIGN="LEFT">
+            </TD>
+        </TR>
+    </TABLE>
+
+    <BR>
+
+    <!-- TARJETAS -->
+    <A NAME="OBRAS"></A>
+
+    <TABLE BORDER="0" CELLPADDING="20" CELLSPACING="15">
+
+        <TR>
+
+            <!-- OBRA 1 -->
+            <TD BGCOLOR="WHITE" ALIGN="CENTER"
+            STYLE="border-radius: 20px;
+            box-shadow: 0px 10px 20px #DDD;">
+
+                <IMG SRC="Riosprofundos.gif" WIDTH="140" HEIGHT="200"
+                STYLE="border-radius: 5px; border:1px solid #EEE;">
+
+                <BR><BR>
+
+                <FONT FACE="Arial" SIZE="4">
+                    <B>Los Ríos Profundos</B>
+                </FONT>
+
+                <BR>
+
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">
+                    José María Arguedas
+                </FONT>
+
+                <BR><BR>
+
+                <BUTTON STYLE="background-color:#F5F5F5;
+                border:1px solid #CCC;
+                border-radius:8px;
+                padding:5px 10px;">
+
+                    Leer Online
+
+                </BUTTON>
+
+            </TD>
+
+            <!-- OBRA 2 -->
+            <TD BGCOLOR="WHITE" ALIGN="CENTER"
+            STYLE="border-radius: 20px;
+            box-shadow: 0px 10px 20px #DDD;">
+
+                <IMG SRC="avessinnido.jpg" WIDTH="140" HEIGHT="200"
+                STYLE="border-radius: 5px; border:1px solid #EEE;">
+
+                <BR><BR>
+
+                <FONT FACE="Arial" SIZE="4">
+                    <B>Aves Sin Nido</B>
+                </FONT>
+
+                <BR>
+
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">
+                    Clorinda Matto de Turner
+                </FONT>
+
+                <BR><BR>
+
+                <BUTTON STYLE="background-color:#F5F5F5;
+                border:1px solid #CCC;
+                border-radius:8px;
+                padding:5px 10px;">
+
+                    Leer Online
+
+                </BUTTON>
+
+            </TD>
+
+            <!-- OBRA 3 -->
+            <TD BGCOLOR="WHITE" ALIGN="CENTER"
+            STYLE="border-radius: 20px;
+            box-shadow: 0px 10px 20px #DDD;">
+
+                <IMG SRC="La Ciudad y los Perros.jpg" WIDTH="140" HEIGHT="200"
+                STYLE="border-radius: 5px; border:1px solid #EEE;">
+
+                <BR><BR>
+
+                <FONT FACE="Arial" SIZE="4">
+                    <B>La Ciudad y los Perros</B>
+                </FONT>
+
+                <BR>
+
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">
+                    Mario Vargas Llosa
+                </FONT>
+
+                <BR><BR>
+
+                <BUTTON STYLE="background-color:#F5F5F5;
+                border:1px solid #CCC;
+                border-radius:8px;
+                padding:5px 10px;">
+
+                    Leer Online
+
+                </BUTTON>
+
+            </TD>
+
+            <!-- OBRA 4 -->
+            <TD BGCOLOR="WHITE" ALIGN="CENTER"
+            STYLE="border-radius: 20px;
+            box-shadow: 0px 10px 20px #DDD;">
+
+                <IMG SRC="Tradiciones Peruanas.jpg" WIDTH="140" HEIGHT="200"
+                STYLE="border-radius: 5px; border:1px solid #EEE;">
+
+                <BR><BR>
+
+                <FONT FACE="Arial" SIZE="4">
+                    <B>Tradiciones Peruanas</B>
+                </FONT>
+
+                <BR>
+
+                <FONT FACE="Arial" SIZE="2" COLOR="GRAY">
+                    Ricardo Palma
+                </FONT>
+
+                <BR><BR>
+
+                <BUTTON STYLE="background-color:#F5F5F5;
+                border:1px solid #CCC;
+                border-radius:8px;
+                padding:5px 10px;">
+
+                    Leer Online
+
+                </BUTTON>
+
+            </TD>
+
+        </TR>
+
+    </TABLE>
+
+    <BR><BR><BR>
+
+    <!-- FRASE -->
+    <TABLE BORDER="0" CELLPADDING="30" WIDTH="70%"
+    BGCOLOR="#F4E1C1"
+    STYLE="border-radius:20px;
+    border:2px dashed #C97C5D;">
+
+        <TR>
+            <TD ALIGN="CENTER">
+
+                <FONT FACE="Playfair Display"
+                COLOR="#7B2C2C"
+                SIZE="6">
+
+                    <I>
+                        "La literatura es el espejo donde un pueblo descubre su alma."
+                    </I>
+
+                </FONT>
+
+                <BR>
+
+                <FONT FACE="Arial" COLOR="#555555" SIZE="3">
+                    — Literatura Peruana
+                </FONT>
+
+            </TD>
+        </TR>
+
+    </TABLE>
+
+    <BR><BR><BR>
+
+    <!-- AUTORES -->
+    <A NAME="AUTORES"></A>
+
+    <TABLE BORDER="0" WIDTH="80%" CELLPADDING="20"
+    BGCOLOR="WHITE"
+    STYLE="border-radius:20px; box-shadow:0px 5px 15px #DDD;">
+
+        <TR>
+
+            <TD ALIGN="CENTER">
+
+                <FONT FACE="Montserrat" COLOR="#7B2C2C" SIZE="5">
+                    <B>Autores Peruanos Destacados</B>
+                </FONT>
+
+                <BR><BR>
+
+                <FONT FACE="Arial" SIZE="4">
+                    • César Vallejo <BR><BR>
+                    • José María Arguedas <BR><BR>
+                    • Ricardo Palma <BR><BR>
+                    • Mario Vargas Llosa <BR><BR>
+                    • Clorinda Matto de Turner
+                </FONT>
+
+            </TD>
+
+        </TR>
+
+    </TABLE>
+</CENTER>
+    <BR><BR><BR>
+    
+
+    <!-- ===== FOOTER ===== -->
+    <TABLE BORDER="0" BGCOLOR="#1B263B" WIDTH="100%" CELLPADDING="40">
+        <TR>
+            <TD ALIGN="CENTER">
+                <FONT FACE="Arial" COLOR="#D4A373" SIZE="4"><B>L I O</B></FONT><BR><BR>
+                <FONT FACE="Arial" COLOR="WHITE" SIZE="2">
+                    Proyecto creado para fomentar la lectura digital en Instituciones Educativas.<BR>
+                    Trujillo, Perú - 2026<BR>
+                    <BR>
+                    <A HREF="#" STYLE="color:white; text-decoration:none;">Instagram</A> | 
+                    <A HREF="#" STYLE="color:white; text-decoration:none;">Facebook</A> | 
+                    <A HREF="#" STYLE="color:white; text-decoration:none;">Contacto</A>
+                </FONT>
+            </TD>
+        </TR>
+    </TABLE>
+
+</CENTER>
+
+</BODY>
+</HTML>
