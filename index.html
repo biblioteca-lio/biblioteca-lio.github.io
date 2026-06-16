@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Biblioteca Virtual</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#60a5fa);
+    background-size:400% 400%;
+    animation:fondo 10s ease infinite;
+    overflow:hidden;
+}
+
+.contenedor{
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+.logo{
+    font-size:120px;
+    font-weight:bold;
+    letter-spacing:15px;
+    text-shadow:0 0 20px white,
+                 0 0 40px #93c5fd,
+                 0 0 60px #60a5fa;
+    animation:aparecer 2s ease-in-out,
+              brillo 2s infinite alternate;
+}
+
+.subtitulo{
+    font-size:28px;
+    margin-top:10px;
+    opacity:0;
+    animation:subir 2s forwards;
+    animation-delay:1s;
+}
+
+.descripcion{
+    max-width:700px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.6;
+    opacity:0;
+    animation:subir 2s forwards;
+    animation-delay:1.8s;
+}
+
+.boton{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 40px;
+    background:white;
+    color:#1e3a8a;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:50px;
+    transition:0.4s;
+    opacity:0;
+    animation:subir 2s forwards;
+    animation-delay:2.5s;
+}
+
+.boton:hover{
+    transform:scale(1.1);
+    background:#dbeafe;
+}
+
+.libro{
+    position:absolute;
+    font-size:50px;
+    animation:flotar 10s linear infinite;
+    opacity:0.3;
+}
+
+.libro:nth-child(1){
+    left:5%;
+    animation-delay:0s;
+}
+
+.libro:nth-child(2){
+    left:25%;
+    animation-delay:2s;
+}
+
+.libro:nth-child(3){
+    left:50%;
+    animation-delay:4s;
+}
+
+.libro:nth-child(4){
+    left:75%;
+    animation-delay:6s;
+}
+
+.libro:nth-child(5){
+    left:90%;
+    animation-delay:8s;
+}
+
+@keyframes fondo{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:scale(0.5);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes brillo{
+    from{
+        text-shadow:0 0 20px white;
+    }
+    to{
+        text-shadow:0 0 30px white,
+                    0 0 60px #60a5fa;
+    }
+}
+
+@keyframes subir{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes flotar{
+    from{
+        top:110%;
+        transform:rotate(0deg);
+    }
+    to{
+        top:-20%;
+        transform:rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="libro">📚</div>
+<div class="libro">📖</div>
+<div class="libro">📚</div>
+<div class="libro">📖</div>
+<div class="libro">📚</div>
+
+<div class="contenedor">
+    <div class="logo">LIO</div>
+
+    <div class="subtitulo">
+        Biblioteca Virtual y Audiolibros
+    </div>
+
+    <div class="descripcion">
+        Descubre un universo de conocimiento, historias y aprendizaje.
+        Explora libros digitales y audiolibros desde cualquier lugar y en cualquier momento.
+    </div>
+
+    <a href="bienvenida.html" class="boton">
+        Entrar a LIO
+    </a>
+</div>
+
+</body>
+</html>
