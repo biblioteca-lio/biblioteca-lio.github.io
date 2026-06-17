@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Plataforma Literaria Profesional</title>
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#FAF9F6;
+    color:#2C3333;
+}
+
+/* HEADER (igual con animación) */
+header{
+    height:250px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:mover 8s infinite alternate;
+}
+
+.logo{
+    color:white;
+    font-size:80px;
+    letter-spacing:10px;
+    animation:brillo 2s infinite alternate;
+}
+
+.slogan{
+    color:white;
+    font-size:20px;
+}
+
+/* NAV (NO TOCADO) */
+nav{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* CONTENIDO */
+.contenedor{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* PRESENTACIÓN */
+.presentacion{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 10px 30px #EEE;
+    margin-bottom:40px;
+}
+
+.presentacion h1{
+    color:#7B2C2C;
+}
+
+/* GRID LIBROS 2 COLUMNAS */
+.libros{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+/* TARJETAS */
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 20px #DDD;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:140px;
+    height:200px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.card button{
+    margin-top:10px;
+    background:#f5f5f5;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:6px 12px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#7B2C2C;
+    color:white;
+}
+
+/* FRASE */
+.frase{
+    background:#F4E1C1;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    margin:40px 0;
+    border:2px dashed #C97C5D;
+}
+
+/* AUTORES */
+.autores{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px #DDD;
+    text-align:center;
+}
+
+/* FOOTER MODERNO */
+.footer{
+    background:linear-gradient(135deg,#0f172a,#1B263B);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+.footer h2{
+    color:#D4A373;
+    letter-spacing:5px;
+}
+
+.redes{
+    margin-top:15px;
+}
+
+.redes a{
+    color:white;
+    margin:0 15px;
+    font-size:20px;
+    transition:.3s;
+}
+
+.redes a:hover{
+    color:#60a5fa;
+    transform:scale(1.2);
+}
+
+/* ANIMACIONES */
+@keyframes brillo{
+    from{transform:scale(1);}
+    to{transform:scale(1.08);}
+}
+
+@keyframes mover{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(20px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    .libros{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">LIO</div>
+    <div class="slogan">Tu mundo de audiolibros y lectura</div>
+</header>
+
+
+<nav>
+    <a href="bienvenida.html">Inicio</a>
+    <a href="audiolibros.html">Audiolibros</a>
+    <a href="peruana.html">Peruana</a>
+    <a href="juvenil.html">Juvenil</a>
+    <a href="universal.html">Universal</a>
+</nav>
+
+<div class="contenedor">
+
+    <!-- PRESENTACIÓN -->
+    <div class="presentacion">
+        <h1>Literatura Peruana</h1>
+        <br>
+        <p>
+        La literatura peruana representa la identidad, historia y cultura del Perú.
+        Desde tradiciones hasta obras modernas, refleja la diversidad del país.
+        </p>
+        <br>
+        <button style="background:#7B2C2C;color:white;padding:10px 20px;border:none;border-radius:20px;">
+            Explorar Obras 📚
+        </button>
+    </div>
+
+    <!-- LIBROS -->
+    <h2 style="color:#7B2C2C;">Obras Destacadas del Perú</h2>
+
+    <div class="libros">
+
+        <div class="card">
+            <img src="Riosprofundos.gif">
+            <h3>Los Ríos Profundos</h3>
+            <p style="color:gray;">José María Arguedas</p>
+            <button>Leer Online</button>
+        </div>
+
+        <div class="card">
+            <img src="avessinnido.jpg">
+            <h3>Aves Sin Nido</h3>
+            <p style="color:gray;">Clorinda Matto</p>
+            <button>Leer Online</button>
+        </div>
+
+        <div class="card">
+            <img src="La Ciudad y los Perros.jpg">
+            <h3>La Ciudad y los Perros</h3>
+            <p style="color:gray;">Mario Vargas Llosa</p>
+            <button>Leer Online</button>
+        </div>
+
+        <div class="card">
+            <img src="Tradiciones Peruanas.jpg">
+            <h3>Tradiciones Peruanas</h3>
+            <p style="color:gray;">Ricardo Palma</p>
+            <button>Leer Online</button>
+        </div>
+
+    </div>
+
+    <!-- FRASE -->
+    <div class="frase">
+        <h3>"La literatura es el espejo donde un pueblo descubre su alma."</h3>
+        <p>— Literatura Peruana</p>
+    </div>
+
+    <!-- AUTORES -->
+    <div class="autores">
+        <h2 style="color:#7B2C2C;">Autores Peruanos</h2>
+        <br>
+        César Vallejo<br><br>
+        José María Arguedas<br><br>
+        Ricardo Palma<br><br>
+        Mario Vargas Llosa<br><br>
+        Clorinda Matto
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <h2>L I O</h2>
+    <p>Proyecto para fomentar la lectura digital</p>
+    <p>Trujillo, Perú - 2026</p>
+
+    <div class="redes">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>

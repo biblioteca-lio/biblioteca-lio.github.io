@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Plataforma Literaria Profesional</title>
+
+<!-- ICONOS (CORRECTO) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#FAF9F6;
+    color:#2C3333;
+}
+
+/* HEADER */
+header{
+    height:250px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:mover 8s infinite alternate;
+}
+
+header::before{top:-100px;left:-100px;}
+header::after{bottom:-100px;right:-100px;}
+
+.logo{
+    color:white;
+    font-size:85px;
+    letter-spacing:10px;
+    text-shadow:0 0 15px white,0 0 30px #93c5fd;
+    animation:brillo 2s infinite alternate;
+}
+
+.slogan{
+    color:white;
+    font-size:20px;
+}
+
+/* NAV (RESPETADO) */
+nav{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px;
+}
+
+/* PRESENTACIÓN */
+.presentacion{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    border-left:12px solid #D4A373;
+    box-shadow:0 10px 30px #EEE;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.presentacion h1{
+    color:#1B263B;
+}
+
+.presentacion p{
+    color:#555;
+    margin-top:10px;
+}
+
+.presentacion button{
+    margin-top:15px;
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    background:#1B263B;
+    color:white;
+    cursor:pointer;
+}
+
+.presentacion button:hover{
+    background:#2c3e50;
+}
+
+/* TITULO */
+.titulo{
+    margin:40px 0 10px;
+}
+
+.titulo h2{
+    color:#1B263B;
+}
+
+.titulo hr{
+    width:180px;
+    border:2px solid #D4A373;
+}
+
+/* GRID 2 COLUMNAS */
+.libros{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* TARJETAS */
+.card{
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 10px 20px #DDD;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:140px;
+    height:200px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.card button{
+    margin-top:10px;
+    padding:6px 12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    background:#f5f5f5;
+}
+
+.card button:hover{
+    background:#1B263B;
+    color:white;
+}
+
+/* FRASE */
+.frase{
+    background:#EAE2B7;
+    padding:30px;
+    border-radius:20px;
+    border:2px dashed #D4A373;
+    text-align:center;
+    margin:40px 0;
+}
+
+/* AUTORES */
+.autores{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px #DDD;
+    text-align:center;
+}
+
+/* FOOTER */
+.footer{
+    background:linear-gradient(135deg,#0f172a,#1B263B);
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.footer h2{
+    color:#D4A373;
+}
+
+.redes{
+    margin-top:15px;
+}
+
+.redes a{
+    color:white;
+    margin:0 15px;
+    font-size:20px;
+    transition:.3s;
+}
+
+.redes a:hover{
+    color:#60a5fa;
+    transform:scale(1.2);
+}
+
+/* ANIMACIONES */
+@keyframes brillo{
+    from{transform:scale(1);}
+    to{transform:scale(1.08);}
+}
+
+@keyframes mover{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(20px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    .libros{
+        grid-template-columns:1fr;
+    }
+
+    .presentacion{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">LIO</div>
+    <div class="slogan">Tu mundo de audiolibros y lectura</div>
+</header>
+
+<nav>
+    <a href="bienvenida.html">Inicio</a>
+    <a href="audiolibros.html">Audiolibros</a>
+    <a href="peruana.html">Peruana</a>
+    <a href="juvenil.html">Juvenil</a>
+    <a href="universal.html">Universal</a>
+</nav>
+
+<div class="container">
+
+<!-- PRESENTACIÓN -->
+<div class="presentacion">
+    <div>
+        <h1>Literatura Universal</h1>
+        <p>
+        Obras clásicas que han marcado generaciones y cuentan la historia del mundo
+        a través de la literatura.
+        </p>
+        <button>Explorar Obras 📚</button>
+    </div>
+    <div style="font-size:60px;">🌍</div>
+</div>
+
+<!-- TITULO -->
+<div class="titulo">
+    <h2>Obras Destacadas del Mundo</h2>
+    <hr>
+</div>
+
+<!-- LIBROS -->
+<div class="libros">
+
+    <div class="card">
+        <img src="LibrosImage/DonQuijote.jpeg">
+        <h3>Don Quijote</h3>
+        <p>Miguel de Cervantes</p>
+        <button>Leer Online</button>
+    </div>
+
+    <div class="card">
+        <img src="LibrosImage/orgulloyprejuiio.jpeg">
+        <h3>Orgullo y Prejuicio</h3>
+        <p>Jane Austen</p>
+        <button>Leer Online</button>
+    </div>
+
+    <div class="card">
+        <img src="metamorfosis.jpg">
+        <h3>La Metamorfosis</h3>
+        <p>Franz Kafka</p>
+        <button>Leer Online</button>
+    </div>
+
+    <div class="card">
+        <img src="Romeo y Julieta.jpg">
+        <h3>Romeo y Julieta</h3>
+        <p>William Shakespeare</p>
+        <button>Leer Online</button>
+    </div>
+
+</div>
+
+<!-- FRASE -->
+<div class="frase">
+    <h3>"Para viajar lejos, no hay mejor nave que un libro."</h3>
+    <p>— Emily Dickinson</p>
+</div>
+
+<!-- AUTORES -->
+<div class="autores">
+    <h2>Autores Universales</h2>
+    <br>
+    William Shakespeare<br><br>
+    Miguel de Cervantes<br><br>
+    Franz Kafka<br><br>
+    Jane Austen<br><br>
+    Homero
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <h2>L I O</h2>
+    <p>Proyecto creado para fomentar la lectura digital</p>
+    <p>Trujillo, Perú - 2026</p>
+
+    <div class="redes">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
