@@ -1,17 +1,9 @@
-<HTML>
-<HEAD>
-    <TITLE>LIO - Plataforma Literaria Profesional</TITLE>
-</HEAD>
-
-<BODY BGCOLOR="#FAF9F6" TEXT="#2C3333">
-
-<BR>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIO - Audiolibros</title>
+<title>LIO - Plataforma Literaria Profesional</title>
 
 <style>
 *{
@@ -21,7 +13,12 @@
     font-family:Arial, sans-serif;
 }
 
-/* ENCABEZADO */
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ===== HEADER ANIMADO ===== */
 header{
     height:250px;
     background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
@@ -56,22 +53,19 @@ header::after{
 
 .logo{
     color:white;
-    font-size:90px;
+    font-size:70px;
     font-weight:bold;
-    letter-spacing:10px;
-    text-shadow:0 0 15px white,
-                0 0 30px #93c5fd;
+    letter-spacing:8px;
     animation:brillo 2s infinite alternate;
 }
 
 .slogan{
     color:white;
-    font-size:22px;
+    font-size:18px;
     margin-top:10px;
-    letter-spacing:2px;
 }
 
-/* MEN  */
+/* NAV */
 nav{
     background:#0f172a;
     padding:15px;
@@ -81,50 +75,129 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 20px;
+    margin:0 15px;
     font-weight:bold;
-    transition:0.3s;
+    transition:.3s;
 }
 
 nav a:hover{
     color:#60a5fa;
 }
 
-/* CONTENIDO */
-main{
-    padding:40px;
+/* ===== BANNER ANIMADO ===== */
+.banner{
+    background:url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200') center/cover;
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
+    color:white;
+    position:relative;
+    overflow:hidden;
 }
 
-main h2{
+.banner::after{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:120%;
+    background:rgba(0,0,0,0.2);
+    animation:zoom 10s infinite alternate;
+}
+
+.banner h2{
+    position:relative;
+    z-index:1;
+    font-size:2rem;
+    text-shadow:2px 2px 5px black;
+}
+
+/* CONTENIDO */
+.contenido{
+    padding:40px;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* ===== 2 COLUMNAS ===== */
+.autores{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:25px;
+}
+
+/* TARJETAS */
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transition:transform .3s, box-shadow .3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    text-align:center;
+    padding:10px;
     color:#1e3a8a;
-    margin-bottom:15px;
 }
 
-main p{
-    color:#444;
-    font-size:18px;
+.card p{
+    padding:15px;
+    text-align:justify;
+    font-size:14px;
 }
 
-/* ANIMACIONES */
+/* FOOTER */
+footer{
+    background:#1B263B;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+footer a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+/* ===== ANIMACIONES ===== */
 @keyframes brillo{
-    from{
-        transform:scale(1);
-    }
-    to{
-        transform:scale(1.08);
-    }
+    from{ transform:scale(1); }
+    to{ transform:scale(1.08); }
 }
 
 @keyframes mover{
-    from{
-        transform:translateY(-20px);
-    }
-    to{
-        transform:translateY(20px);
+    from{ transform:translateY(-20px); }
+    to{ transform:translateY(20px); }
+}
+
+/* animación del banner */
+@keyframes zoom{
+    from{ transform:scale(1); }
+    to{ transform:scale(1.1); }
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    .autores{
+        grid-template-columns:1fr;
     }
 }
 </style>
+
 </head>
 <body>
 
@@ -134,111 +207,15 @@ main p{
 </header>
 
 <nav>
-    <a href="bienvenida.html">Inicio</a>
-    <a href="audiolibros.html">Audiolibros</a>
-    <a href="peruana.html">Peruana</a>
-    <a href="juvenil.html">Juvenil</a>
-    <a href="universal.html">Universal</a>
+    <a href="#">Inicio</a>
+    <a href="#">Audiolibros</a>
+    <a href="#">Peruana</a>
+    <a href="#">Juvenil</a>
+    <a href="#">Universal</a>
 </nav>
 
- <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body{
-            background:#f4f4f4;
-            color:#333;
-        }
-
-        header{
-            background:#4a148c;
-            color:white;
-            text-align:center;
-            padding:30px;
-        }
-
-        nav{
-            background:#6a1b9a;
-            text-align:center;
-            padding:15px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 15px;
-            font-weight:bold;
-        }
-
-        .banner{
-            background:url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200') center/cover;
-            height:350px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            color:white;
-            text-shadow:2px 2px 5px black;
-            font-size:2rem;
-            text-align:center;
-        }
-
-        .contenido{
-            padding:40px;
-        }
-
-        .autores{
-            display:flex;
-            justify-content:space-around;
-            flex-wrap:wrap;
-            gap:20px;
-        }
-
-        .card{
-            background:white;
-            width:300px;
-            border-radius:10px;
-            overflow:hidden;
-            box-shadow:0 0 10px rgba(0,0,0,0.2);
-        }
-
-        .card img{
-            width:100%;
-            height:250px;
-            object-fit:cover;
-        }
-
-        .card h3{
-            text-align:center;
-            padding:10px;
-            color:#4a148c;
-        }
-
-        .card p{
-            padding:15px;
-            text-align:justify;
-        }
-
-        footer{
-            background:#4a148c;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:30px;
-        }
-    </style>
-</head>
-<body>
-
-
 <section class="banner">
-    <div>
-        <h2>Escucha historias que inspiran</h2>
-        <p>Miles de audiolibros al alcance de tus oídos</p>
-    </div>
+    <h2>Escucha historias que inspiran</h2>
 </section>
 
 <section class="contenido">
@@ -247,63 +224,21 @@ main p{
     <div class="autores">
 
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Mario_Vargas_Llosa_2016.jpg" alt="Mario Vargas Llosa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Mario_Vargas_Llosa_2016.jpg">
             <h3>Mario Vargas Llosa</h3>
-            <p>
-                Escritor peruano ganador del Premio Nobel de Literatura.
-                Sus obras exploran la sociedad, la política y la condición humana.
-            </p>
+            <p>Escritor peruano ganador del Premio Nobel de Literatura.</p>
         </div>
 
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Gabriel_Garcia_Marquez.jpg" alt="Gabriel García Márquez">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Gabriel_Garcia_Marquez.jpg">
             <h3>Gabriel García Márquez</h3>
-            <p>
-                Autor colombiano reconocido por el realismo mágico y obras
-                inolvidables como "Cien años de soledad".
-            </p>
+            <p>Autor del realismo mágico y "Cien años de soledad".</p>
         </div>
 
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/J_K_Rowling_2010.jpg" alt="J. K. Rowling">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/J_K_Rowling_2010.jpg">
             <h3>J. K. Rowling</h3>
-            <p>
-                Creadora de la saga Harry Potter, una de las series literarias
-                más exitosas de todos los tiempos.
-            </p>
+            <p>Creadora de Harry Potter, una saga mundialmente famosa.</p>
         </div>
 
-    </div>
-</section>
-
-<section class="contenido">
-    <h2>¿Por qué elegir LIO?</h2>
-    <br>
-    <p>
-        En LIO encontrarás una amplia colección de audiolibros para aprender,
-        entretenerte y descubrir nuevas historias. Escucha donde quieras y cuando quieras.
-    </p>
-</section>
-
-
-    <!-- ===== FOOTER ===== -->
-    <TABLE BORDER="0" BGCOLOR="#1B263B" WIDTH="100%" CELLPADDING="40">
-        <TR>
-            <TD ALIGN="CENTER">
-                <FONT FACE="Arial" COLOR="#D4A373" SIZE="4"><B>L I O</B></FONT><BR><BR>
-                <FONT FACE="Arial" COLOR="WHITE" SIZE="2">
-                    Proyecto creado para fomentar la lectura digital en Instituciones Educativas.<BR>
-                    Trujillo, Perú - 2026<BR>
-                    <BR>
-                    <A HREF="#" STYLE="color:white; text-decoration:none;">Instagram</A> | 
-                    <A HREF="#" STYLE="color:white; text-decoration:none;">Facebook</A> | 
-                    <A HREF="#" STYLE="color:white; text-decoration:none;">Contacto</A>
-                </FONT>
-            </TD>
-        </TR>
-    </TABLE>
-
-</CENTER>
-
-</BODY>
-</HTML>
+        <div class="card">
