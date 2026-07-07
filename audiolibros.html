@@ -266,31 +266,80 @@ nav a:hover{
 
     <div class="autores">
 
-        <div class="card">
-            <img src="LibrosImage/mariovargasllosa.jpeg">
-            <h3>Mario Vargas Llosa</h3>
-            <p>Escritor peruano ganador del Nobel de Literatura.</p>
-        </div>
+<div class="card">
+    <img src="LibrosImage/mariovargasllosa.jpeg" alt="Mario Vargas Llosa">
 
-        <div class="card">
-            <img src="LibrosImage/gabrielgarciamarquez.jpeg">
-            <h3>Gabriel García Márquez</h3>
-            <p>Autor del realismo mágico.</p>
-        </div>
+    <h3>Mario Vargas Llosa</h3>
 
-        <div class="card">
-            <img src="LibrosImage/J. K. Rowling.jpeg">
-            <h3>J. K. Rowling</h3>
-            <p>Creadora de Harry Potter.</p>
-        </div>
+    <p>Escritor peruano ganador del Premio Nobel de Literatura.</p>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600">
-            <h3>Nuevo Autor</h3>
-            <p>Descubre nuevos talentos literarios.</p>
-        </div>
+    <h4 style="margin-top:15px;color:#1e3a8a;">
+        <i class="fas fa-headphones"></i> Los Vientos
+    </h4>
 
-    </div>
+    <audio controls style="width:100%; margin-top:10px;">
+        <source src="AudioLibro\Los Vientos - Mario Vargas Llosa.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</div>
+<div class="card">
+    <img src="LibrosImage/gabrielgarciamarquez.jpeg" alt="Gabriel García Márquez">
+
+    <h3>Gabriel García Márquez</h3>
+
+    <p>Autor colombiano, ganador del Premio Nobel de Literatura y máximo representante del realismo mágico.</p>
+
+    <h4 style="margin-top:15px;color:#1e3a8a;">
+        <i class="fas fa-headphones"></i> Cronica de Una Muerte Anunciada
+    </h4>
+
+    <audio controls style="width:100%; margin-top:10px;">
+        <source src="AudioLibro\Cronica de una muerte Anunciada.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</div>
+
+<div class="card">
+    <img src="LibrosImage/J. K. Rowling.jpeg" alt="J. K. Rowling">
+
+    <h3>J. K. Rowling</h3>
+
+    <p>Escritora británica, reconocida mundialmente por ser la creadora de la saga de Harry Potter.</p>
+
+    <h4 style="margin-top:15px;color:#1e3a8a;">
+        <i class="fas fa-headphones"></i> Harry Potter
+    </h4>
+
+    <audio controls style="width:100%; margin-top:10px;">
+        <source src="AudioLibro\Harry Potter.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600" alt="Buscador de autores">
+
+    <h3>Buscar más autores</h3>
+
+    <p>¿No encuentras el autor o libro que buscas? Escríbelo aquí.</p>
+
+    <form action="https://www.google.com/search" method="GET" target="_blank" style="margin-top:15px;">
+        <input
+            type="text"
+            name="q"
+            placeholder="Buscar autor o libro..."
+            style="width:100%; padding:10px; border:2px solid #2563eb; border-radius:8px; outline:none;">
+
+        <button
+            type="submit"
+            style="margin-top:10px; width:100%; padding:10px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:bold;">
+            <i class="fas fa-search"></i> Buscar en Google
+        </button>
+    </form>
+</div>
 
 </section>
 
