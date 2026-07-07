@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Plataforma Literaria Profesional</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logo.png" type="image/png">
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#FAF9F6;
+    color:#2C3333;
+}
+
+/* HEADER (ESTILO HTML 1) */
+header{
+    height:180px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:mover 8s infinite alternate;
+}
+
+.logo-img{
+    width:100px;
+    animation:flotar 3s infinite;
+}
+
+.slogan{
+    color:white;
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* NAV */
+nav{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* BANNER */
+.banner{
+    background:url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200') center/cover;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    position:relative;
+}
+
+.banner::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.25);
+}
+
+.banner h2{
+    position:relative;
+    z-index:1;
+}
+
+/* CONTENIDO */
+.contenido{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* TITULO */
+.contenido h2{
+    text-align:center;
+    color:#1B263B;
+    margin-bottom:30px;
+}
+
+/* GRID */
+.autores{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* CARDS estilo HTML 1 */
+.card{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 10px 20px #DDD;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:10px 0 5px;
+    color:#1B263B;
+}
+
+.card p{
+    font-size:14px;
+}
+
+/* FOOTER */
+.footer{
+    background:linear-gradient(135deg,#0f172a,#1B263B);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:40px;
+}
+
+.footer h2{
+    color:#D4A373;
+}
+
+.redes a{
+    color:white;
+    margin:0 15px;
+    font-size:20px;
+}
+
+.redes a:hover{
+    color:#60a5fa;
+}
+
+/* BOTÓN FLOTANTE */
+.floating-menu{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+}
+
+.floating-btn{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    animation:pulse 2s infinite;
+}
+
+.floating-btn img{
+    width:40px;
+}
+
+.floating-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    bottom:80px;
+    right:0;
+}
+
+.floating-links a{
+    background:#1e3a8a;
+    color:white;
+    padding:10px;
+    margin:5px 0;
+    text-decoration:none;
+    border-radius:20px;
+}
+
+/* ANIMACIONES */
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes mover{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(20px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    .autores{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <img src="logo.png" class="logo-img">
+    <div class="slogan">Tu mundo de audiolibros y lectura</div>
+</header>
+
+<nav>
+    <a href="bienvenida.html">Inicio</a>
+    <a href="audiolibros.html">Audiolibros</a>
+    <a href="peruana.html">Peruana</a>
+    <a href="juvenil.html">Juvenil</a>
+    <a href="universal.html">Universal</a>
+</nav>
+
+<section class="banner">
+    <h2>Escucha historias que inspiran</h2>
+</section>
+
+<section class="contenido">
+
+    <h2>Autores Destacados</h2>
+
+    <div class="autores">
+
+<div class="card">
+    <img src="LibrosImage/mariovargasllosa.jpeg" alt="Mario Vargas Llosa">
+
+    <h3>Mario Vargas Llosa</h3>
+
+    <p>Escritor peruano ganador del Premio Nobel de Literatura.</p>
+
+    <h4 style="margin-top:15px;color:#1e3a8a;">
+        <i class="fas fa-headphones"></i> Los Vientos
+    </h4>
+
+    <audio controls style="width:100%; margin-top:10px;">
+        <source src="AudioLibro\Los Vientos - Mario Vargas Llosa.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</div>
+<div class="card">
+    <img src="LibrosImage/gabrielgarciamarquez.jpeg" alt="Gabriel García Márquez">
+
+    <h3>Gabriel García Márquez</h3>
+
+    <p>Autor colombiano, ganador del Premio Nobel de Literatura y máximo representante del realismo mágico.</p>
+
+    <h4 style="margin-top:15px;color:#1e3a8a;">
+        <i class="fas fa-headphones"></i> Cronica de Una Muerte Anunciada
+    </h4>
+
+    <audio controls style="width:100%; margin-top:10px;">
+        <source src="AudioLibro\Cronica de una muerte Anunciada.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</div>
+
+<div class="card">
+    <img src="LibrosImage/J. K. Rowling.jpeg" alt="J. K. Rowling">
+
+    <h3>J. K. Rowling</h3>
+
+    <p>Escritora británica, reconocida mundialmente por ser la creadora de la saga de Harry Potter.</p>
+
+    <h4 style="margin-top:15px;color:#1e3a8a;">
+        <i class="fas fa-headphones"></i> Harry Potter
+    </h4>
+
+    <audio controls style="width:100%; margin-top:10px;">
+        <source src="AudioLibro\Harry Potter.m4a" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600" alt="Buscador de autores">
+
+    <h3>Buscar más autores</h3>
+
+    <p>¿No encuentras el autor o libro que buscas? Escríbelo aquí.</p>
+
+    <form action="https://www.google.com/search" method="GET" target="_blank" style="margin-top:15px;">
+        <input
+            type="text"
+            name="q"
+            placeholder="Buscar autor o libro..."
+            style="width:100%; padding:10px; border:2px solid #2563eb; border-radius:8px; outline:none;">
+
+        <button
+            type="submit"
+            style="margin-top:10px; width:100%; padding:10px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:bold;">
+            <i class="fas fa-search"></i> Buscar en Google
+        </button>
+    </form>
+</div>
+
+</section>
+
+<footer class="footer">
+    <h2>L I O</h2>
+    <p>Proyecto creado para fomentar la lectura digital</p>
+
+    <div class="redes">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+</footer>
+
+<!-- MENÚ FLOTANTE -->
+<div class="floating-menu">
+    <div class="floating-btn" onclick="toggleMenu()">
+        <img src="logo.png">
+    </div>
+
+    <div class="floating-links" id="menu">
+        <a href="bienvenida.html">Inicio</a>
+        <a href="audiolibros.html">Audiolibros</a>
+	<a href="peruana.html">Peruana</a>
+        <a href="juvenil.html">Juvenil</a>
+        <a href="universal.html">Universal</a>
+    </div>
+</div>
+
+<script>
+function toggleMenu(){
+    let menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>

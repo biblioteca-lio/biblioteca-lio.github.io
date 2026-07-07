@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Plataforma Literaria Profesional</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logo.png" type="image/png">
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#FAF9F6;
+    color:#2C3333;
+}
+
+/* HEADER (igual al código 1) */
+header{
+    height:180px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#60a5fa);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    animation:mover 8s infinite alternate;
+}
+
+.logo-img{
+    width:100px;
+    animation:flotar 3s infinite;
+}
+
+.slogan{
+    color:white;
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* NAV */
+nav{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* PRESENTACIÓN (adaptado a estilo 1) */
+.presentacion{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 10px 30px #EEE;
+    margin-bottom:40px;
+    border-left:12px solid #D4A373;
+}
+
+.presentacion h2{
+    color:#1B263B;
+}
+
+.presentacion button{
+    margin-top:15px;
+    background:#1B263B;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+}
+
+.presentacion button:hover{
+    background:#374151;
+}
+
+/* TITULO */
+.titulo{
+    margin-bottom:15px;
+}
+
+.titulo h2{
+    color:#1B263B;
+}
+
+/* GRID */
+.libros{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* CARDS */
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 20px #DDD;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:140px;
+    height:200px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.card button{
+    margin-top:10px;
+    background:#f5f5f5;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:6px 12px;
+}
+
+.card button:hover{
+    background:#1B263B;
+    color:white;
+}
+
+/* FRASE (estilo código 1) */
+.frase{
+    background:#EAE2B7;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    margin:40px 0;
+    border:2px dashed #D4A373;
+}
+
+/* FOOTER */
+.footer{
+    background:linear-gradient(135deg,#0f172a,#1B263B);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer h2{
+    color:#D4A373;
+}
+
+.redes a{
+    color:white;
+    margin:0 15px;
+    font-size:20px;
+}
+
+.redes a:hover{
+    color:#60a5fa;
+}
+
+/* BOTÓN FLOTANTE */
+.floating-menu{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+}
+
+.floating-btn{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    animation:pulse 2s infinite;
+}
+
+.floating-btn img{
+    width:40px;
+}
+
+.floating-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    bottom:80px;
+    right:0;
+}
+
+.floating-links a{
+    background:#1e3a8a;
+    color:white;
+    padding:10px 15px;
+    margin:5px 0;
+    text-decoration:none;
+    border-radius:20px;
+}
+
+/* ANIMACIONES */
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes mover{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(20px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    .libros{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo-img">
+    <div class="slogan">Tu mundo de audiolibros y lectura</div>
+</header>
+
+<nav>
+        <a href="bienvenida.html">Inicio</a>
+        <a href="audiolibros.html">Audiolibros</a>
+	<a href="peruana.html">Peruana</a>
+        <a href="juvenil.html">Juvenil</a>
+        <a href="universal.html">Universal</a>
+</nav>
+
+<div class="container">
+
+<div class="presentacion">
+    <h2>Literatura Juvenil</h2>
+    <p>
+        Explora historias llenas de aventura, romance y mundos fantásticos.
+        Vive miles de realidades y descubre universos increíbles.
+    </p>
+    <button>Explorar Mundos ✨</button>
+</div>
+
+<div class="titulo">
+    <h2>Sagas y Libros Tendencia</h2>
+</div>
+
+<div class="libros">
+
+<div class="card">
+<script? no> </script>
+    <img src="LibrosImage/Harry Potter.jpeg">
+    <h3>Harry Potter</h3>
+    <p>J.K. Rowling</p>
+    <a href="Libros/Harry_Potter_y_la_Piedra_Filosofal-J_K_Rowling.pdf" target="_blank">
+        <button>Leer Online</button>
+    </a>
+</div>
+
+<div class="card">
+    <img src="LibrosImage/Losjuegosdelhambre.jpeg">
+    <h3>Los Juegos del Hambre</h3>
+    <p>Suzanne Collins</p>
+<a href="Libros\Junio-III°M-Juegos-del-hambre-Suzanne-Collins.pdf" target="_blank">
+            <button>Leer Online</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="LibrosImage/elladrondelrayo.jpeg">
+    <h3>Percy Jackson</h3>
+    <p>Rick Riordan</p>
+<a href="Libros\Percy-Jackson-y-el-ladrón-del-rayo-Rick-Riordan.pdf" target="_blank">
+            <button>Leer Online</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="LibrosImage/Divergente.jpeg">
+    <h3>Divergente</h3>
+    <p>Veronica Roth</p>
+<a href="Libros\Divergente 1 - Divergente - Veronica Roth.pdf" target="_blank">
+            <button>Leer Online</button>
+</a>
+</div>
+
+</div>
+
+<div class="frase">
+    <h3>"Un libro es un sueño que tienes en tus manos."</h3>
+    <p>— Neil Gaiman</p>
+</div>
+
+</div>
+
+<footer class="footer">
+    <h2>L I O</h2>
+    <p>Proyecto creado para fomentar la lectura digital</p>
+
+    <div class="redes">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+</footer>
+
+<!-- MENÚ FLOTANTE -->
+<div class="floating-menu">
+    <div class="floating-btn" onclick="toggleMenu()">
+        <img src="logo.png">
+    </div>
+
+    <div class="floating-links" id="menu">
+        <a href="bienvenida.html">Inicio</a>
+        <a href="audiolibros.html">Audiolibros</a>
+	<a href="peruana.html">Peruana</a>
+        <a href="juvenil.html">Juvenil</a>
+        <a href="universal.html">Universal</a>
+    </div>
+</div>
+
+<script>
+function toggleMenu(){
+    let menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
+``

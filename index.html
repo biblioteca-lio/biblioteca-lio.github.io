@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIO - Biblioteca Virtual</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#60a5fa);
+    background-size:400% 400%;
+    animation:fondo 10s ease infinite;
+    overflow:hidden;
+}
+
+/* CONTENEDOR */
+.contenedor{
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+/* LOGO CON ANIMACIÓN */
+.logo img{
+    width:150px;
+    animation:logoCarga 2.5s ease-out forwards,
+              logoBrillo 2s infinite alternate;
+}
+
+/* SUBTEXTO */
+.subtitulo{
+    font-size:28px;
+    margin-top:15px;
+    opacity:0;
+    animation:subir 2s forwards;
+    animation-delay:1s;
+}
+
+.descripcion{
+    max-width:700px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.6;
+    opacity:0;
+    animation:subir 2s forwards;
+    animation-delay:1.8s;
+}
+
+/* BOTÓN */
+.boton{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 40px;
+    background:white;
+    color:#1e3a8a;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:50px;
+    transition:0.4s;
+    opacity:0;
+    animation:subir 2s forwards;
+    animation-delay:2.5s;
+}
+
+.boton:hover{
+    transform:scale(1.1);
+    background:#dbeafe;
+}
+
+/* LIBROS FLOTANTES */
+.libro{
+    position:absolute;
+    font-size:50px;
+    animation:flotar 10s linear infinite;
+    opacity:0.3;
+}
+
+.libro:nth-child(1){ left:5%; animation-delay:0s;}
+.libro:nth-child(2){ left:25%; animation-delay:2s;}
+.libro:nth-child(3){ left:50%; animation-delay:4s;}
+.libro:nth-child(4){ left:75%; animation-delay:6s;}
+.libro:nth-child(5){ left:90%; animation-delay:8s;}
+
+/* ANIMACIONES */
+
+/* FONDO */
+@keyframes fondo{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* LOGO CRECE */
+@keyframes logoCarga{
+    0%{
+        opacity:0;
+        transform:scale(0.3);
+    }
+    50%{
+        transform:scale(1.15);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* BRILLO */
+@keyframes logoBrillo{
+    from{
+        filter:drop-shadow(0 0 10px rgba(255,255,255,0.6));
+    }
+    to{
+        filter:drop-shadow(0 0 25px rgba(255,255,255,1))
+               drop-shadow(0 0 40px rgba(96,165,250,0.8));
+    }
+}
+
+/* APARECER TEXTO */
+@keyframes subir{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* LIBROS SUBEN */
+@keyframes flotar{
+    from{
+        top:110%;
+        transform:rotate(0deg);
+    }
+    to{
+        top:-20%;
+        transform:rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ICONOS FLOTANTES -->
+<div class="libro">📚</div>
+<div class="libro">📖</div>
+<div class="libro">📚</div>
+<div class="libro">📖</div>
+<div class="libro">📚</div>
+
+<!-- CONTENIDO -->
+<div class="contenedor">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="logo.png" alt="Logo LIO">
+    </div>
+
+    <div class="subtitulo">
+        Biblioteca Virtual y Audiolibros
+    </div>
+
+    <div class="descripcion">
+        Descubre un universo de conocimiento, historias y aprendizaje.
+        Explora libros digitales y audiolibros desde cualquier lugar y en cualquier momento.
+    </div>
+
+    <a href="bienvenida.html" class="boton">
+        Entrar a LIO
+    </a>
+
+</div>
+
+</body>
+</html>
